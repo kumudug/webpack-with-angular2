@@ -11,7 +11,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['ts', 'angular2-template-loader']
+        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
       },
       {
         test: /\.html$/,
@@ -35,3 +35,5 @@ module.exports = {
     ]
   }
 }
+
+//We probably don't need to load and process the application-wide styles files for unit tests and doing so would slow us down; we'll use the null loader for those CSS.
